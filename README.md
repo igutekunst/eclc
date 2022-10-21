@@ -6,6 +6,9 @@ developing firmware for resource constrained embedded systems.
 
 ECLC aims to be all the "batteries" necessary for a "batteries included" programming environment for embedded systems.
 
+## Notice
+This README is aspirational. It is written in present tense as if the work has been completed. As development commences, the language will be updated to reflect the current status, and the aspirational statements will be moved to another document.
+
 ## Components
 
 ### Standard Software Library
@@ -20,7 +23,7 @@ ECLC aims to be all the "batteries" necessary for a "batteries included" program
  - String manipulation
 
 ### Drivers
-ECLC will provide a driver framework and drivers for a variety of standard interfaces and hardware peripherals. 
+ECLC provides a driver framework and drivers for a variety of standard interfaces and hardware peripherals. 
 
 #### On Chip Drivers
  - UART/USART
