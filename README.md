@@ -118,7 +118,7 @@ To be usable in a professional and mission critical environment, ECLC will be ri
  - End-to-end testing on a variety of real hardware platforms
  - End-to-end testing with fault injection
 
-## Abhorrently and Liability
+## Warranty and Liability
 
 Although efforts have been made to make this code as robust and reliable as possible, it is provided as is no
 other warranty, express or implied. We hereby disclaims all implied warranties, including any warranty of
