@@ -128,3 +128,19 @@ Use at your own risk.
 
 If you or your organization requires a guarantee or warranty, contract or other arrangement, please reach out to us.
 
+## Directory layout
+
+The directory layout is a work in progress.
+Goals:
+ - Minimal coupling. It should be possible to use a subset of the libraries without requiring pulling in extraneous code
+ - Easy configurability to support various platforms
+
+This project aims to support a variety of CPU architectures, boards, RTOSs. 
+
+There is a spectrum of configurability from hard-codec compile time configuration to one "super binary" that supports all architectures and permutations. ECLC aims to strike a balance, with simplicity being a key design goal.
+
+### Knobs
+ - Platform (roughly a single compilation target)
+ - Specific CPU/Chip (STM32f407 vs STM32F405) (different set of compatible peripherals)
+ - Specific board revision (Different pinouts)
+ - Different middleware
