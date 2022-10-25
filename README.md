@@ -144,3 +144,26 @@ There is a spectrum of configurability from hard-codec compile time configuratio
  - Specific CPU/Chip (STM32f407 vs STM32F405) (different set of compatible peripherals)
  - Specific board revision (Different pinouts)
  - Different middleware
+
+#### Dynamic Configuration
+It would be pretty "cool" if the same binary could be used on a number of different targets.
+
+For this to work, at least a few constraints would need to be satisfied
+
+Constraints: 
+ - CPU Architecture
+ - Memory map (or maybe fPIC if code is loaded with a bootloader)
+
+In theory, a driver model could load different drivers depending on what is present on the device, effectively building up an API surface for the application layer.
+
+If the whole system uses dependency injection of some soft this could work without making serious tradeoffs in the design.
+
+```C++
+    // Since the filesystem only requires a single block_device reference, as long as that object is created before the 
+    // constructor, it doesn't really matter how it happens. It could be statically in a main function, 
+    // or dynamically with some complex runtime dependency resolution.
+    Filesystem filesystem(block_device)
+```
+
+
+    
